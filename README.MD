@@ -37,5 +37,10 @@ Make sure you have properly configured the .env and finally run:
 uvicorn main:app
 ~~~
 
+Now you can see the documantation swagger on http://127.0.0.1:8000/docs
+
 ## Docker
-A dockerfile is added with all the necessary requirements to run the project, you only need to build the image and run the container
+A dockerfile is added with all the necessary requirements to run the project, you only need to build the image and run the container.
+
+### Time used
+The time invested in this test was approximately 12 hours
