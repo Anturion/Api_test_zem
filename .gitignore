@@ -1,0 +1,11 @@
+venv
+/venv
+env
+/env
+__pychache__
+/__pychache__
+__pycache__
+.pytest_cache
+build.ps
+
+.env

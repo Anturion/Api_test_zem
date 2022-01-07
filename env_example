@@ -1,0 +1,9 @@
+#BEAREAR_TWITTER_TOKEN = 'Barear token from twitter developers profile' (required)
+#ID_USER = 'id user to create the unique user in database'
+
+# Database settings connection
+#USERNAME_DB = 'db username'
+#PASSWORD = 'db password'
+#HOST = 'db host'
+#DB_NAME = 'db name'
+#PORT = db port (int)

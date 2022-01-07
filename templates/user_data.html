@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="py-5 text-center">
+        <h2>Title: {{user.title}}</h2>
+      </div>
+    <div class="row g-5">
+        <div class="col-md-6 col-lg-6">
+            <div class='row'>
+                {% if user.image_path%}
+                <div class='col-lg-2'>
+                    <img src="{{user.image_path}}" class="bd-placeholder-img rounded-circle" width="140" height="140">
+                </div>
+                {%else%}
+                <div class='col-lg-2'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                    </svg>
+                </div>
+                {% endif %}
+            </div>
+            <div class="row g-3 p-5">
+                <div class="col-sm-6">
+                    <h5 for="firstName" class="form-label">Name: {{user.name}}</h5>
+                </div>
+            </div>
+            <div class="row g-3 p-5">
+                <div class="col-sm-6">
+                    <h5 for="firstName" class="form-label">Email: {{user.email}}</h5>
+                </div>
+            </div>
+            <div class="row g-3 p-5">
+                <div class="col-sm-6">
+                    <h5 for="firstName" class="form-label">Phone: {{user.phone}}</h5>
+                </div>
+            </div>
+            <div class="row g-3 p-5">
+                <div class="col-sm-6">
+                    <h5 class='fw-bold'>Description:</h5>
+                    <p class="col fs-6">
+                        {{user.description}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-6">
+            <div class="row g-3 p-5">
+                <div class="col-sm-6">
+                    <h5 class='fw-bold'>Tweets:</h5>
+                    <p class="col fs-6">
+                        <ul class="list-group">
+                            {% for tweet in tweets %}
+                                <li class="py-3">{{tweet}}</li>
+                            {% endfor %}
+                            </ul>
+                    </p>
+                </div>
+            </div>
+            <a class="btn btn-primary btn-lg" href="{{url_for('user_update')}}">Actualizar usuario</a>  
+        </div>
+    </div>
+</div>
+{% endblock %}

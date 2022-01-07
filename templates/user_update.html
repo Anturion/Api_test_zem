@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class="row g-5">
+        <div class="col-md-7 col-lg-8">
+            
+            <div class='col-lg-6'>
+                <form method='POST' enctype = "multipart/form-data">
+                    <div class="mb-3">
+                        <input style='display:none' type='file' name='image' id='image' required>
+                        <a ype="button" onclick="document.getElementById('image').click()" class="btn btn-dark">
+                            Agregar foto
+                        </a>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Title</label>
+                        <input type="text" name='title' class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Name</label>
+                        <input type="text" name='name' class="form-control" aria-describedby="emailHelp" pattern="[a-zA-Z ]+$" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                        <input type="email" name='email' class="form-control" aria-describedby="emailHelp"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Phone number</label>
+                        <input type="number" name='phone' class="form-control" aria-describedby="emailHelp" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Twitter username without(@)</label>
+                        <input type="text" name='twitter_user' class="form-control" aria-describedby="emailHelp" pattern="[a-z0-9]+$" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Description</label>
+                        <textarea type="text" name='description' class="form-control" id="exampleInputPassword1" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

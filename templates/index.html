@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="p-5 mb-4 bg-light rounded-3">
+    <div class='container-fluid py-5'>
+        <h2 class='display-5 fw-bold'>Zemoga API</h2>
+        <p class="col-md-8 fs-4">
+            Este proyecto fue realizado usando el framework FastAPI de python para la creación
+            del backend, esto por su gran desempeño sobre otras librerias o frameworks como Flask, 
+            también se integró junto con la librería Jinja2 y Boostrap para desplegar el frontend
+            desde la instancia de FastAPI.
+        </p>
+        <a class="btn btn-primary btn-lg" href="{{url_for('user_data')}}">Visitar perfil del usuario</a>  
+    </div>
+</div>
+{% endblock %}
